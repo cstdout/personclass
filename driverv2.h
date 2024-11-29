@@ -1,7 +1,7 @@
 #include "person.h"
 class Driver: public Person{
 private:
-    string driverLiscence;
+    string driverLicense;
     int issueDate;
 public:
     Driver(const string&, const string&, const string&, int, const string&, int);
