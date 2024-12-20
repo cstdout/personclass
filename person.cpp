@@ -105,12 +105,12 @@ int  Person::getAge() const
     return getCurrentYear() - _dateOfBirth;
 }
 
-friend ostream&  Person::operator << (ostream& o, const Person& p)
+ostream&  Person::operator << (ostream& o, const Person& p)
 {
     o << p.getFirstName() << ' ' << p.getLastName() << ' ' << p.getPassportNumber() << ' ' << p.getDateOfBirth();
     return o;
 }
-friend istream&  Person::operator >> (istream& i, Person& p)
+istream&  Person::operator >> (istream& i, Person& p)
 {
     string firstName, lastName, passportNumber;
     int dateOfBirth;
