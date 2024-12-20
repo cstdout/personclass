@@ -56,12 +56,12 @@ void setIssueDate(int issueDate)
 
 int calculateIssueDate() const;
 
-friend ostream& operator << (ostream& out, const Driver& dr)
+ostream& operator << (ostream& out, const Driver& dr)
 {
   out << dr << ' ' << dr.getDriverLiscense() << ' ' << dr.getIssueDate();
   return out;
 }
-friend istream& operator >> (istream& in,  Driver& dr);
+istream& operator >> (istream& in,  Driver& dr);
 {
   string driverLicense;
   int issueDate;
